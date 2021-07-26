@@ -1,0 +1,6 @@
+.card-list__card-delete{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('../../images/delete-cross.svg');
+}

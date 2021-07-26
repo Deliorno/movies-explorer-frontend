@@ -1,0 +1,7 @@
+.about__line{
+   margin: 0;
+   height: 36px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}

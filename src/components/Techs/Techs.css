@@ -1,0 +1,113 @@
+.about-tech{
+    background-color: #272727;
+}
+
+.about-tech__title{
+    align-self: center;
+    justify-self: center;
+    font-size: 50px;
+    line-height: 58px;
+    /* identical to box height, or 116% */
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.04em;
+    margin: 20px 0 26px 0px;
+}
+
+.about-tech__text{
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.04em;
+    width: 460px;
+    margin: 0 0 100px 0;
+    align-self: center;
+    text-align: center;
+}
+
+.about-tech__tech-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-tech__tech{
+    background: #303030;
+    border-radius: 10px;
+    width: 90px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 0;
+}
+
+.about-tech__tech:last-of-type{
+    margin: 0 0 0 0;
+}
+
+.about-tech__content{
+    box-sizing: border-box;
+    padding: 100px 70px 100px 70px;
+    margin: 0 auto 0;
+    max-width: 1280px;
+    height: 625px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    font-family: Inter;
+}
+
+@media screen and (max-width:768px){
+
+    .about-tech__content{
+        height: auto;
+        padding: 90px 50px 90px 50px;
+    }
+    
+}
+
+@media screen and (max-width:680px){
+
+    .about-tech__content{
+        padding: 90px 14px 90px 14px;
+    }
+
+    .about-tech__tech-block{
+        display: grid;
+        grid-template-columns: 90px 90px;
+        grid-template-rows: auto;
+        row-gap: 19px;
+        column-gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-tech__title{
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .about-tech__tech{
+        margin: 0;
+    }
+
+    .about-tech__text{
+        width: 100%;
+        font-size: 11px;
+        line-height: 16px;
+        margin: 0 0 50px 0;
+    }
+    
+}
+
+@media screen and (max-width:320px){
+
+    .about-tech__content{
+        padding: 70px 14px 70px 14px;
+    }
+    
+}

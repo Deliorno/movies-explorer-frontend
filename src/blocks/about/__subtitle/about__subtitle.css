@@ -1,0 +1,10 @@
+.about__subtitle{
+    margin-top: 14px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height, or 121% */
+    color: #8B8B8B;
+}

@@ -1,0 +1,55 @@
+.serach-form-mini__btn{
+    height: 34px;
+    width: 34px;
+    margin: auto 0 auto 0;
+    transition: 0.3s;
+}
+
+.serach-form-mini__btn:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.serach-form__actions-mini{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin: 46px auto 0 auto;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.serach-form-mini__content{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 80px 0 45px 0;
+    border-bottom: 1px solid #424242;
+}
+
+/* @media screen and (max-width:768px){
+
+    .serach-form{
+        padding: 0 50px 0 50px;
+    }
+
+} */
+
+@media screen and (max-width:680px){
+
+    .serach-form__toggle-btn{
+        margin: auto 0 auto 0;
+    }
+
+    .serach-form__input{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .serach-form__area{
+        box-sizing: border-box;
+        padding: 19px 19px 19px 19px;
+    }
+
+}
+

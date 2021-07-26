@@ -1,0 +1,9 @@
+.about-me__link{
+    color:white;
+    text-decoration: none;
+    margin: 0 20px 0 0;
+}
+
+.about-me__link:last-of-type{
+    margin: 0 0 0 0;
+}
