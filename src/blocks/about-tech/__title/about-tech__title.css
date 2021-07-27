@@ -1,0 +1,11 @@
+.about-tech__title{
+    align-self: center;
+    justify-self: center;
+    font-size: 50px;
+    line-height: 58px;
+    /* identical to box height, or 116% */
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: -0.04em;
+    margin: 20px 0 26px 0px;
+}

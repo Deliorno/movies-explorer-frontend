@@ -1,0 +1,99 @@
+.intro{
+    background-color: #073042;
+}
+
+.intro__text{
+    width: 626px;
+    margin-top: 50px;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 52px;
+    /* or 130% */
+    letter-spacing: -0.04em;
+    color:white;
+}
+
+.intro__images{
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 100%;
+    max-width: 722px;
+    height: auto;
+    height: 244px;
+    margin: 0 0 60px 0;
+    background-image: url(../../images/intro-logo.svg);
+    background-repeat: no-repeat;
+}
+
+.intro__content{
+    box-sizing: border-box;
+    padding: 0px 70px 0px 70px;
+    margin: 0 auto 0;
+    max-width: 1280px;
+    height: 560px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width:768px){
+    .intro__content{
+        padding: 0px 44px 0px 44px;
+        max-width: 768px;
+        justify-content: center;
+        height: auto;
+    }
+    
+    .intro__images{
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        max-width: 680px;
+        margin: 0;
+        padding: 0 0 70px 0;
+    }
+
+    .intro__text{
+        margin-top: 300px;
+        margin-bottom: 140px;
+        justify-self: center;
+        align-self: center;
+        font-size: 40px;
+        line-height: 52px;
+        /* or 130% */
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:680px){
+    .intro__content{
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .intro__text{
+        width: 300px;
+        margin-top: 183px;
+        margin-bottom: 60px;
+        font-size: 31px;
+        line-height: 39px;
+    }
+
+    .intro__images{
+        background-position: center;
+    }
+}
+
+@media screen and (max-width:400px){
+    
+    .intro__images{
+        padding: 0 0 40px 0;
+    }
+
+}

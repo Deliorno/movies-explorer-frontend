@@ -1,0 +1,9 @@
+.about{
+    box-sizing: border-box;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    height: 608px;
+    margin: 0 auto 0 auto;
+    padding: 110px 70px 110px 70px;
+}

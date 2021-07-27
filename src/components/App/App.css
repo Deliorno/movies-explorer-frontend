@@ -1,0 +1,7 @@
+.app-main{
+    background-color: #202020;
+}
+
+.app-main:hover{
+    cursor:default;
+}

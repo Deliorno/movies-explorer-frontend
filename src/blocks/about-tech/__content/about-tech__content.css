@@ -1,0 +1,11 @@
+.about-tech__content{
+    box-sizing: border-box;
+    padding: 100px 70px 100px 70px;
+    margin: 0 auto 0;
+    max-width: 1280px;
+    height: 625px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    font-family: Inter;
+}

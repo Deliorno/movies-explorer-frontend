@@ -1,0 +1,10 @@
+.about__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    color:white;
+}

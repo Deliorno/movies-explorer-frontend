@@ -1,0 +1,55 @@
+.err{
+    background-color: #202020;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Inter;
+    text-align: center;
+    color: white;
+}
+
+.err__header{
+    margin: auto 0 0 0;
+    font-size: 140px;
+    line-height: 169px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.err__text{
+    font-size: 16px;
+    line-height: 19px;
+    margin: 5px 0 0 0;
+}
+
+.err__button{
+    font-size: 16px;
+    line-height: 19px;
+    margin: auto 0 60px 0;
+    color: #4285F4 !important;
+    transition: 0.5s;
+}
+
+.err__button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+@media screen and (max-width:680px){
+    .err__header{
+        font-size: 80px;
+        line-height: 97px;
+    }
+
+    .err__text{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .err__button{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+}

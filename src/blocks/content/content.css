@@ -1,0 +1,9 @@
+.content{
+    box-sizing: border-box;
+    padding: 0 70px 0 70px;
+    max-width: 1280px;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
