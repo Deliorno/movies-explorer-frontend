@@ -1,7 +1,7 @@
 .card-list{
     display: grid;
-    grid-template-rows:  min-content;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-rows:  max-content;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     row-gap: 37px;
     column-gap: 24px;
     padding: 70px 0 10px 0;
@@ -22,7 +22,8 @@
 }
 
 .card-list__card-img{
-    max-height: 203px;
+    height: 203px;
+    width: 100%;
     object-fit: cover;
     background-repeat: no-repeat;
     border-top-left-radius: 6px;

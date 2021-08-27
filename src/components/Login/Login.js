@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 function Login(props){
 
     const [emailErrorMessage, setEmailErrorMessage] = React.useState({errorMessage:'', isValid:true});
-    const [passwordErrorMessage, setPasswordErrorMessage] = React.useState({errorMessage:'', isValid:true});
+    // const [passwordErrorMessage, setPasswordErrorMessage] = React.useState({errorMessage:'', isValid:true});
     const [isValid, setIsValid] = React.useState(true);
 
     const emailRegex = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
@@ -13,30 +13,36 @@ function Login(props){
     const emailRef = React.useRef();
     const passwordRef = React.useRef();
 
-    function setFormValid(){
-        setIsValid(emailErrorMessage.isValid && passwordErrorMessage.isValid)
-    }
+    // function setFormValid(){
+    //     setIsValid(emailErrorMessage.isValid)
+    // }
 
     React.useEffect(() => {
         setEmailErr()
-        console.log(emailRef.current.validationMessage);
     }, [])
 
-    React.useEffect(() => {
-        setFormValid()
-      }, [emailErrorMessage, passwordErrorMessage])
+    // React.useEffect(() => {
+    //     setFormValid()
+    //   }, [emailErrorMessage])
 
     function setEmailErr() {
-        // console.log(e.target)
-        console.log(emailRef.current.value)
+        // console.log(emailRegex.test(emailRef.current.value))
+        console.log(!emailRef.current.validationMessage)
         setEmailErrorMessage({errorMessage:emailRef.current.validationMessage, isValid:emailRegex.test(emailRef.current.value)})
-        console.log(emailErrorMessage)
     }
 
-    function setPasswordErr(e) {
-        setPasswordErrorMessage({errorMessage:e.target.validationMessage, isValid:e.target.checkValidity()})
-    }
+    // function setPasswordErr(e) {
+    //     setPasswordErrorMessage({errorMessage:e.target.validationMessage, isValid:e.target.checkValidity()})
+    // }
 
+    function handleSubmit(e){
+        console.log('Yf;fkf')
+        e.preventDefault();
+        if ((passwordRef.current.value !== '') && (emailRef.current.value !== '')){
+           props.onLogin(passwordRef.current.value,emailRef.current.value) 
+        }
+    };
+    console.log(emailErrorMessage.isValid)
     return(
         <div className="login">
             <Link to = "/"><div className='login__logo'></div></Link>
@@ -44,16 +50,16 @@ function Login(props){
             <form className='login__form'>
                 <div className='login__form-field'>
                     <label className='login__form-field-tip'>E-mail</label>
-                    <input ref={emailRef} className='login__form-field-input' required type="email" defaultValue="pochta@yandex.ru" onChange={setEmailErr}></input>
-                    <span className={emailErrorMessage.isValid ? 'form-err email-err' : 'form-err email-err form-err_active_y'}>{!emailErrorMessage.isValid && 'Введите корректный email.'}</span>
+                    <input ref={emailRef} className='login__form-field-input' required type="email" onChange={setEmailErr}></input>
+                    <span className={emailErrorMessage.isValid ? 'form-err email-err' : 'form-err email-err form-err_active_y'}>{emailErrorMessage.isValid && 'Введите корректный email.'}</span>
                 </div>
                 <div className='login__form-field'>
                     <label className='login__form-field-tip'>Пароль</label>
-                    <input ref={passwordRef} className='login__form-field-input' required type="password" onChange={setPasswordErr} defaultValue="kjsfhgklj"></input>
-                    <span className={passwordErrorMessage.isValid ? 'form-err email-err' : 'form-err email-err form-err_active_y'}>{passwordErrorMessage.errorMessage}</span>
+                    <input ref={passwordRef} className='login__form-field-input' required type="password"></input>
+                    <span className='form-err email-err'>{/* {passwordErrorMessage.errorMessage}*/}</span> 
                 </div>
             </form>
-            <button type="submit" className={isValid ? 'login__btn' : 'login__btn-disabled'} disabled={isValid && 'disabled'}>Войти</button>
+            <button type="submit" onClick={handleSubmit} className={isValid ? 'login__btn' : 'login__btn-disabled'} disabled={!isValid && 'disabled'}>Войти</button>
             <div className='login__btn-login'>
                 <p className='login__btn-text'>Ещё не зарегистрированы?</p>
                 <Link to='/signup'><p className='login__login'>Регистрация</p></Link>

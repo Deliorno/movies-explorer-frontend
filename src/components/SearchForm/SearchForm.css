@@ -92,13 +92,12 @@ input::placeholder{
     box-sizing: border-box;
     display: inline-block;
     position: absolute;
-    right: 2px;
+    left: 2px;
     top: 2px;
-
     width: 16px;
     height: 16px;
     border: 1px solid #FFFFFF;
-    background-color:  #2BE080;
+    background-color:  #919191;
     border-radius: 50%;
 
     transform: translateX(0);
@@ -106,12 +105,11 @@ input::placeholder{
 }
 
 .serach-form__toggle-btn:checked::after {
-    transform: translateX(calc(-100% )); 
-    background-color:  #919191;
+    transform: translateX(calc(100% ));
+    background-color:  #2BE080;
   }
   
 .serach-form__toggle-btn:checked {
-
 }
 
 .serach-form__text{

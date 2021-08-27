@@ -63,7 +63,7 @@
 }
 
 .header-mini__text{
-    margin: 0 0 24px 0;
+    margin: 0 0 24px 0 !important;
     padding: 0 0 4px 0;
     transition: 0.5s;
 }
@@ -100,11 +100,10 @@
 .header-mini__btn{
     height: 32px;
     width: 100px;
-    justify-self: flex-end;
     padding: 0px;
     font-size: 14px;
     line-height: 16px;
-    margin-top: auto;
+    margin-top: auto !important;
 }
 
 .header-mini__btn-close{

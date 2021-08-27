@@ -149,14 +149,16 @@
     -webkit-text-fill-color: #CCCCCC;
     -webkit-box-shadow: 0 0 0px 1000px #2F2F2F inset;
     transition: background-color 5000s ease-in-out 0s;
-  
 }
 
 @media screen and (max-width:680px){
 
     .login{
-        box-sizing: unset;
-        padding: 30px;
+        padding: 56px 30px 30px 30px;
+    }
+
+    .login__header{
+        margin: 50px 0 80px 0;  
     }
 
     .login__btn{

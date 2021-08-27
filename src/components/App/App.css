@@ -1,5 +1,7 @@
 .app-main{
     background-color: #202020;
+    min-height: 100vh;
+    position: relative;
 }
 
 .app-main:hover{

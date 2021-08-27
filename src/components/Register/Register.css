@@ -101,6 +101,11 @@
     margin: 70px 0 16px 0;
 }
 
+.register__btn_disabled{
+    background: #2F2F2F;
+    color: #8B8B8B;
+}
+
 .register__btn:hover{
     opacity: 0.7;
     cursor: pointer;
@@ -126,11 +131,27 @@
     margin: 0;
 }
 
+.register__form-field-input::-webkit-input-placeholder {color:#CCCCCC}
+.register__form-field-input::-moz-placeholder          {color:#CCCCCC}/* Firefox 19+ */
+.register__form-field-input:-moz-placeholder           {color:#CCCCCC}/* Firefox 18- */
+.register__form-field-input:-ms-input-placeholder      {color:#CCCCCC}
+
+.register__form-field-input:-webkit-autofill,
+.register__form-field-input:-webkit-autofill:hover, 
+.register__form-field-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #CCCCCC;
+    -webkit-box-shadow: 0 0 0px 1000px #2F2F2F inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 @media screen and (max-width:680px){
 
     .register{
-        box-sizing: unset;
-        padding: 30px;
+        padding: 56px 30px 30px 30px;
+    }
+
+    .register__header{
+        margin: 50px 0 80px 0;  
     }
 
     .register__btn{

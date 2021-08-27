@@ -10,7 +10,7 @@ function NavTab(props){
                 <Link to='/'><img alt="Лого" src={logo} className="header__logo"></img></Link>
                     <div className="header__info">
                         <div className="header__links">
-                        <Link to='/signup'><p className="header__text" rel="noopener noreferrer" target="_blank">Регистрация</p></Link>
+                        <Link to='/signup' rel="noopener noreferrer" target="_blank"><p className="header__text">Регистрация</p></Link>
                         </div>
                         <Link to='/signin' rel="noopener noreferrer" target="_blank"><button className="header__btn" type="button">Войти</button></Link>
                     </div>
