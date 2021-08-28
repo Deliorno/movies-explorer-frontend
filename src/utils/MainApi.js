@@ -11,9 +11,9 @@ const handleOriginalResponse = (res) => {
 class MainApi {
 constructor() {
   //super(props);
-    this._urlMovies = "https://deliorno.your-movies.nomoredomains.club/movies";
-    this._urlUserInfo = "https://deliorno.your-movies.nomoredomains.club/users/me";
-    this._baseUrl = "https://deliorno.your-movies.nomoredomains.club";
+    this._urlMovies = "https://api.deliorno.your-movies.nomoredomains.club/movies";
+    this._urlUserInfo = "https://api.deliorno.your-movies.nomoredomains.club/users/me";
+    this._baseUrl = "https://api.deliorno.your-movies.nomoredomains.club";
     // this._headers = {
     //     'content-type': 'application/json',
     //     'Authorization': `Bearer ${localStorage.getItem('jwt')}`
