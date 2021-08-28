@@ -51,8 +51,8 @@ function App() {
     })
   }
 
-  function handleRegistration(password, email){
-    api.register(password, email)
+  function handleRegistration(password, email, name){
+    api.register(password, email, name)
       .then((data)=>{
         if (data === 'Err'){
         } else {
