@@ -1,5 +1,4 @@
 import './SearchFormMini.css';
-import searchIicon from '../../images/search-icon.svg';
 import searchBtn from '../../images/search-button.svg';
 import React from "react";
 

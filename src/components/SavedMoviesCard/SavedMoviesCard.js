@@ -1,6 +1,5 @@
-import React, { useEffect }from "react";
+import React from "react";
 import './SavedMoviesCard.css';
-import api from '../../utils/MainApi';
 
 function SavedMoviesCard(props){
 
