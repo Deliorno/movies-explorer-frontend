@@ -71,6 +71,7 @@ function App() {
     if (loggedIn){
         api.getUserInfo(localStorage.getItem('jwt'))
           .then((userInfo)=> {
+              console.log(userInfo)
               setCurrentUser(userInfo.data);
           })
 
@@ -112,7 +113,7 @@ function App() {
       .then((res) => {
         // console.log(res)
         if (res){
-            // console.log(jwt)
+            console.log(jwt)
             //console.log('Авторизуем')
             setLoggedIn(true);
         }
@@ -177,7 +178,7 @@ function App() {
       <div className="app-main">
         <Switch>
           <Route exact path="/">
-            <Main loggedIn={loggedIn}/>
+            <Main loggedIn={loggedIn} windowWidth = {windowWidth}/>
           </Route> 
           <ProtectedRoute path="/movies" component={Movies} 
             loggedIn={loggedIn}

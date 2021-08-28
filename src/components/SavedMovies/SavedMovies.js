@@ -1,7 +1,6 @@
 import React, { useEffect }from "react";
 import './SavedMovies.css';
 import SavedMoviesCard from '../SavedMoviesCard/SavedMoviesCard';
-import api from '../../utils/MainApi';
 import Header from '../Header/Header';
 import HeaderMini from '../HeaderMini/HeaderMini';
 import SearchForm from '../SearchForm/SearchForm';
@@ -11,27 +10,26 @@ function SavedMovies(props){
 
     const [filteredMovies, setFilteredMovies] = React.useState([]);
 
-
     useEffect(() => {
-        console.log(typeof props.filmForSearch)
-        console.log(typeof props.filmForSearch !== 'object')
+        if (props.filmForSearch == 0){
+            setFilteredMovies(props.savedMovies); 
+        }
         if(props.isShortMovies){
-            const filterMovies = props.savedMovies.filter(movie => movie.nameRU.toLowerCase().includes(props.filmForSearch.toLowerCase()) & movie.duration <= 40);
-            console.log(filterMovies)
-            setFilteredMovies(filterMovies);
-        } else if (typeof props.filmForSearch !== 'object'){
+            if(props.filmForSearch.length > 0){
+                console.log(props.isShortMovies)
+                const filterMoviesDuration = props.savedMovies.filter(movie => movie.nameRU.toLowerCase().includes(props.filmForSearch.toLowerCase()) & movie.duration <= 40);
+                setFilteredMovies(filterMoviesDuration);
+            } else {
+                const filterDuration = props.savedMovies.filter(movie => movie.duration <= 40);
+                console.log(filterDuration);
+                setFilteredMovies(filterDuration);
+            }
+        } else if (props.filmForSearch.length > 0){
             const filterMovies = props.savedMovies.filter(movie => movie.nameRU.toLowerCase().includes(props.filmForSearch.toLowerCase()));
             console.log(filteredMovies)
             setFilteredMovies(filterMovies); 
         }
-        if (typeof props.filmForSearch == 'object'){
-            setFilteredMovies(props.savedMovies); 
-        }
       }, [props.filmForSearch, props.isShortMovies, props.searchSavedMovies, props.savedMovies]);
-      
-      useEffect(() => {
-        
-      }, []);
 
     return(
         <div>
@@ -40,7 +38,7 @@ function SavedMovies(props){
             <div className="movies">
                 <div className="card-list">
                 {filteredMovies.map((savedFilm)=>{
-                    console.log(savedFilm);
+                    // console.log(savedFilm);
                     return(
                         <SavedMoviesCard onDeleteMovie = {props.onDeleteMovie} savedFilm = {savedFilm} key={savedFilm._id}/>)
                 

@@ -2,7 +2,7 @@ import './HeaderMini.css';
 import '../../index.css';
 import logo from '../../images/logo.svg';
 import React from "react";
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function HeaderMini(props){
     const [menuVisible, isMenuVisible] = React.useState(false);

@@ -64,7 +64,7 @@ function MoviesCardList(props){
                 )
             })}
             </div>
-            {(filteredMovies.length > 0) & (notAlMovies <= allFilteredMovies.length) ? 
+            {(filteredMovies.length > 0) & (notAlMovies < allFilteredMovies.length) ? 
             <div className="more-movies">
                 <button type="button" onClick={moreFIlms} className="more-movies-btn">Еще</button>
             </div> : ''}

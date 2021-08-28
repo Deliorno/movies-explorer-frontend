@@ -11,9 +11,9 @@ const handleOriginalResponse = (res) => {
 class MainApi {
 constructor() {
   //super(props);
-    this._urlMovies = "https://api.deliorno.your-movies.nomoredomains.club/movies";
-    this._urlUserInfo = "https://api.deliorno.your-movies.nomoredomains.club/users/me";
-    this._baseUrl = 'https://api.deliorno.your-movies.nomoredomains.club';
+    this._urlMovies = "http://localhost:3005/movies";
+    this._urlUserInfo = "http://localhost:3005/users/me";
+    this._baseUrl = "http://localhost:3005";
     // this._headers = {
     //     'content-type': 'application/json',
     //     'Authorization': `Bearer ${localStorage.getItem('jwt')}`
@@ -69,19 +69,6 @@ getUserInfo(token){
  }
  
  createMovies(data,token){
-  //  console.log('https://api.nomoreparties.co/' + data.image.url, 'https://api.nomoreparties.co/' + data.image.formats.thumbnail.url, data.trailerLink)
-   console.log(data)
-   console.log({country: data.country,
-    director: data.director,
-    duration: data.duration,
-    year: data.year,
-    description: data.description,
-    image: 'https://api.nomoreparties.co/' + data.image.url,
-    trailer: data.trailerLink,
-    thumbnail: 'https://api.nomoreparties.co/' + data.image.formats.thumbnail.url,
-    movieId: data.movieId,
-    nameRU: data.nameRU,
-    nameEN: data.nameEN})
     return fetch(this._urlMovies, {
         method: 'POST',
         headers: {
@@ -130,8 +117,7 @@ getUserInfo(token){
   };
 
   logIn(password, email){
-    console.log(this._baseUrl)
-    //console.log(JSON.stringify({"password":password, "email":email}))
+    console.log(JSON.stringify({"password":password, "email":email}))
     return fetch(`${this._baseUrl}/signin`, {
       method: 'POST',
       headers: {

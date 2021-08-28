@@ -1,6 +1,6 @@
 import './Register.css';
 import { Link } from 'react-router-dom';
-import React, { useEffect } from "react";
+import React from "react";
 
 function Register(props){
 
@@ -63,7 +63,7 @@ function Register(props){
                     </div>
                     <div className='register__form-field'>
                         <label className='register__form-field-tip'>Пароль</label>
-                        <input ref={passwordRef} type='password' className='register__form-field-input form-err__text-color'></input>
+                        <input ref={passwordRef} type='password' className='register__form-field-input'></input>
                         <span className='form-err password-err'></span>
                     </div>
                 </form>

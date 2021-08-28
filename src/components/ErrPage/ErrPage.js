@@ -1,4 +1,4 @@
-import { useParams, useHistory } from 'react-router-dom'; 
+import { useHistory } from 'react-router-dom'; 
 import './ErrPage.css';
 // const browserHistory = require('react-router/lib/BrowserHistory').default;
 // onClick={browserHistory.goBack}

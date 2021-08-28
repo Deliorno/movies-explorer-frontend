@@ -1,6 +1,6 @@
 import './Login.css';
 import { Link } from 'react-router-dom';
-import React, { useEffect } from "react";
+import React from "react";
 
 function Login(props){
 
@@ -27,7 +27,7 @@ function Login(props){
 
     function setEmailErr() {
         // console.log(emailRegex.test(emailRef.current.value))
-        console.log(!emailRef.current.validationMessage)
+        // console.log(!emailRef.current.validationMessage)
         setEmailErrorMessage({errorMessage:emailRef.current.validationMessage, isValid:emailRegex.test(emailRef.current.value)})
     }
 
@@ -50,7 +50,7 @@ function Login(props){
             <form className='login__form'>
                 <div className='login__form-field'>
                     <label className='login__form-field-tip'>E-mail</label>
-                    <input ref={emailRef} className='login__form-field-input' required type="email" onChange={setEmailErr}></input>
+                    <input ref={emailRef} className={emailErrorMessage.isValid ? 'register__form-field-input' : 'register__form-field-input form-err__text-color'} required type="email" onChange={setEmailErr}></input>
                     <span className={emailErrorMessage.isValid ? 'form-err email-err' : 'form-err email-err form-err_active_y'}>{emailErrorMessage.isValid && 'Введите корректный email.'}</span>
                 </div>
                 <div className='login__form-field'>
