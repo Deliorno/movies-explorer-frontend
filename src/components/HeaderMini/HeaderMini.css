@@ -1,0 +1,133 @@
+.header-mini__options{
+    background-image: url(../../images/header-button.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    transition: 0.5s;
+}
+
+.header-mini__options:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+    
+.header-mini__btn:hover{
+    cursor: pointer;
+}
+
+.header-mini__menu{
+    box-sizing: border-box;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: #202020;
+    color: white;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 520px;
+    z-index: 1;
+    padding: 23px 23px 90px 23px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-mini__menu_visible_no{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header-mini__layout{
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #000000;
+    opacity: 0.3;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-mini__layout_visible_no{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header-mini__text{
+    margin: 0 0 24px 0 !important;
+    padding: 0 0 4px 0;
+    transition: 0.5s;
+}
+
+.header-mini__text:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.header-mini__text_active_yes{
+    border-bottom: 1px solid white;
+    width: min-content;
+    margin: 0 auto 24px auto;
+}
+
+.header-mini__text:last-of-type{
+    margin: 0;
+}
+
+.header-mini__links{
+    margin: 105px 0 0 0;
+    padding: 0;
+}
+
+.header-mini__info{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.header-mini__btn{
+    height: 32px;
+    width: 100px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: auto !important;
+}
+
+.header-mini__btn-close{
+    height: 32px;
+    width: 32px;
+    padding: 0px;
+    background-image: url(../../images/close-cross.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    justify-self: flex-end;
+    align-self: flex-end;
+    transition: 0.5s;
+}
+
+.header-mini__btn-close:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 520px){
+    .header-mini__menu{
+        width: 100%;
+        padding: 14px 14px 46px 14px;
+    }
+}

@@ -1,0 +1,141 @@
+.serach-form{
+    box-sizing: border-box;
+    max-width: 1280px;
+    padding: 0 70px 0 70px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 auto 10px auto;
+}
+
+.serach-form__content{
+    box-sizing: border-box;
+    padding: 70px 0 70px 0;
+    border-bottom: 1px solid #424242;
+}
+
+.serach-form__area{
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #222222;
+    box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 9px;
+}
+
+.serach-form__img{
+    height: 34px;
+    width: 34px;
+    margin: auto 19px auto 19px;
+}
+
+.serach-form__search{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.serach-form__input{
+    padding: 19px 0 19px 0;
+    background-color: #222222;
+    color:#8B8B8B;
+    border:none;
+    outline:none;
+    width: 100%;
+}
+
+input::placeholder{
+    text-align: left;
+}
+
+.serach-form__actions{
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+}
+
+.serach-form__btn{
+    height: 34px;
+    width: 34px;
+    margin: auto 0 auto 0;
+    padding: 0 19px 0 19px;
+    border-right: 1px solid #505050;
+    transition: 0.3s;
+}
+
+.serach-form__btn:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.serach-form__toggle-btn{
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    margin: auto 0 auto 29px;
+    background-color: #343434;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+.serach-form__toggle-btn::after{
+    content: "";
+
+    box-sizing: border-box;
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #FFFFFF;
+    background-color:  #919191;
+    border-radius: 50%;
+
+    transform: translateX(0);
+    transition: 0.3s;
+}
+
+.serach-form__toggle-btn:checked::after {
+    transform: translateX(calc(100% ));
+    background-color:  #2BE080;
+  }
+  
+.serach-form__toggle-btn:checked {
+}
+
+.serach-form__text{
+    color:white;
+    font-size: 13px;
+    line-height: 18px;
+    margin: auto 30px auto 14px;
+    transition: all 0.5s ease 0s;
+}
+
+.serach-form__text_active_no{
+    color:rgba(255, 255, 255, 0.322);
+}
+
+@media screen and (max-width:768px){
+
+    .serach-form{
+        padding: 0 50px 0 50px;
+    }
+
+}
+
+@media screen and (max-width:680px){
+
+    .serach-form{
+        padding: 0 14px 0 14px;
+    }
+
+}

@@ -1,0 +1,15 @@
+.intro__text{
+    width: 626px;
+    height: 104px;
+    margin-top: 50px;
+    justify-self: flex-start;
+    align-self: flex-start;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 52px;
+    /* or 130% */
+    letter-spacing: -0.04em;
+    color:white;
+}

@@ -1,0 +1,10 @@
+.about-me__img{
+    width: 270px;
+    height: 330px;
+    border-radius: 10px;
+    background-color: black;
+    grid-column: 2;
+    grid-row: 1 / 5;
+    align-self: start;
+    justify-self: end;
+}

@@ -1,0 +1,6 @@
+.about-me__info{
+    display: grid;  
+    grid-template-rows:  repeat(8, auto);
+    grid-template-columns: 600px auto;
+    color:white;
+}

@@ -1,0 +1,35 @@
+.movies{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.more-movies{
+    padding: 50px 0 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.more-movies-btn{
+    width: 320px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 6px;
+    border: 1px solid #3A3A3A;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+    transition: 0.1s;
+}
+
+.more-movies-btn:hover{
+    cursor: pointer;
+    background-color: #222222;
+}

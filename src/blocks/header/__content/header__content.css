@@ -1,0 +1,9 @@
+.header__content{
+    box-sizing: border-box;
+    padding: 18px 70px 18px 70px;
+    max-width: 1280px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
