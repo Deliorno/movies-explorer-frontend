@@ -28,7 +28,8 @@ function App() {
   const [savedMovies, setSavedMovies] = React.useState([]);
   const [filmForSearch, setFilmForSearch] = React.useState([]);
   const [isBtnActive, setIsBtnActive] = React.useState(false);
-  const [forSearchSaved, setForSearchSaved] = React.useState(false)
+  const [forSearchSaved, setForSearchSaved] = React.useState(false);
+  const [isInfoTooltipOpen, setInfoTooltipOpen] = React.useState(false);
     
   function handleShortFilms(){
     setIsBtnActive(!isBtnActive);
@@ -56,13 +57,16 @@ function App() {
       .then((data)=>{
         if (data === 'Err'){
         } else {
-          history.push('/signin');
+          handleLogIn(password, email)
         }
     })
   }
 
   function signOut(){
+    localStorage.removeItem('saveSearch');
     localStorage.removeItem('jwt');
+    console.log(localStorage.getItem('jwt'));
+    console.log(localStorage.getItem('saveSearch'))
     setLoggedIn(false);
     history.push('/');
   }
@@ -124,6 +128,7 @@ function App() {
   function handleUpdateUser(data){
     api.setUserInfo(data,localStorage.getItem('jwt'))
     .then((resp)=> {
+        setInfoTooltipOpen(true)
         setCurrentUser(resp.data);
     })
   }
@@ -172,6 +177,10 @@ function App() {
     setForSearchSaved(!forSearchSaved);
   }
 
+  function closePoup(){
+    setInfoTooltipOpen(false);
+  }
+
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -208,7 +217,9 @@ function App() {
             loggedIn={loggedIn}
             windowWidth = {windowWidth} 
             onExit = {signOut} 
-            onUpdateUser={handleUpdateUser}/>
+            onUpdateUser={handleUpdateUser}
+            isInfoTooltipOpen={isInfoTooltipOpen}
+            onClosePopup={closePoup}/>
           <Route path="/signin">
             <Login onLogin={handleLogIn}/>
           </Route>

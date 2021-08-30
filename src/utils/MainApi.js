@@ -8,6 +8,9 @@ const handleOriginalResponse = (res) => {
      console.log(err)})
 }
 
+// https://api.deliorno.your-movies.nomoredomains.club
+// http://localhost:3005
+
 class MainApi {
 constructor() {
   //super(props);

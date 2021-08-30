@@ -32,13 +32,7 @@
 }
 
 .profile__form-field{
-    font-size: 11px;
-    line-height: 13px;
-    padding: 16px 0 16px 0;
-    background-color: transparent;
-    border-bottom: 1px solid #424242;
-    display: flex;
-    flex-direction: row;
+   
 }
 
 .profile__form-field:last-of-type{
@@ -53,6 +47,26 @@
     border: none;
     background-color: transparent;
     outline: none;
+}
+
+.profile__form-input{
+    font-size: 11px;
+    line-height: 13px;
+    padding: 16px 0 16px 0;
+    background-color: transparent;
+    border-bottom: 1px solid #424242;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile__form-err{
+    color: #EE3465;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 10px 0 0 0;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .profile__buttons{
@@ -71,6 +85,10 @@
     border: none;
     transition: 0.3s;
     margin: 0 0 16px 0;
+}
+
+.profile__btn_disabled{
+    color: rgb(95, 95, 95);
 }
 
 .profile__btn:last-of-type{
